@@ -26,8 +26,7 @@ app.use((req, res, next) => {
 
 app.use(cors({
   origin: [
-    "http://localhost:5173",
-    "https://vercel.com/h1a2r3s4hs-projects/lms-nmdo"
+    "https://lms-1-rscv.onrender.com"
   ],
   credentials: true
 }))
