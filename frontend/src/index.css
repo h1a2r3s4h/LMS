@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import "tailwindcss";
+
+* {
+  font-family: Outfit;
+}
+
+/* ========================= */
+/* FUTURISTIC LOGO ANIMATIONS */
+/* ========================= */
+
+@keyframes scanSweep {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.45;
+  }
+  85% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+
+@keyframes microGlitch {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(-1px, 0px);
+  }
+  40% {
+    transform: translate(1px, 0px);
+  }
+  60% {
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.logo-glitch:hover {
+  animation: microGlitch 0.25s linear 1;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.9s ease-out forwards;
+}
+
+.animate-fadeInUpDelay {
+  opacity: 0;
+  animation: fadeInUp 0.9s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.animate-fadeInUpDelay2 {
+  opacity: 0;
+  animation: fadeInUp 0.9s ease-out forwards;
+  animation-delay: 0.35s;
+}
+
