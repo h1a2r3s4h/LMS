@@ -26,8 +26,8 @@ import ViewLecture from './pages/ViewLecture'
 import SearchWithAi from './pages/SearchWithAi'
 import getAllReviews from './customHooks/getAllReviews'
 
-export const serverUrl = import.meta.env.VITE_API_URL;
-
+export const serverUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
+console.log("SERVER URL:", serverUrl)
 function App() {
   
   let {userData} = useSelector(state=>state.user)
