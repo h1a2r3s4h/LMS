@@ -26,7 +26,8 @@ app.use((req, res, next) => {
 
 app.use(cors({
   origin: [
-    "https://lms-1-rscv.onrender.com"
+    "https://lms-1-rscv.onrender.com",
+    "http://localhost:5173"
   ],
   credentials: true
 }))
