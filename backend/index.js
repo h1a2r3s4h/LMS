@@ -24,13 +24,22 @@ app.use((req, res, next) => {
   next();
 });
 
+const allowedOrigins = [
+  "https://lms-1-rscv.onrender.com",
+  "http://localhost:5173"
+];
+
 app.use(cors({
-  origin: [
-    "https://lms-1-rscv.onrender.com",
-    "http://localhost:5173"
-  ],
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true); // allow non-browser requests
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(null, false);
+    }
+  },
   credentials: true
-}))
+}));
 
 app.use("/api/auth", authRouter)
 app.use("/api/user", userRouter)
